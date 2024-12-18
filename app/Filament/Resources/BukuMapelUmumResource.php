@@ -64,9 +64,6 @@ class BukuMapelUmumResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
-            // ->headerActions([
-            //     ExportAction::make()->exporter(BukuMapelUmumExporter::class)
-            // ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),

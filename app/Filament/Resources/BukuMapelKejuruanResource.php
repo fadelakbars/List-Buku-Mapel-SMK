@@ -76,16 +76,8 @@ class BukuMapelKejuruanResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                // ExportAction::make()->exporter(BukuMapelKejuruanExporter::class)
+                Tables\Actions\EditAction::make()->label('Tambah Buku'),
             ])
-            // ->headerActions([
-            //     ExportAction::make()
-            //     ->exporter(BukuMapelKejuruanExporter::class)
-            //     ->formats([
-            //         ExportFormat::Xlsx,
-            //     ])
-            // ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
