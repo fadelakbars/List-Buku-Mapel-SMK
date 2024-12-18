@@ -76,7 +76,7 @@ class BukuMapelKejuruanResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make()->label('Tambah Buku'),
+                Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
