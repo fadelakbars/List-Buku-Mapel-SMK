@@ -32,7 +32,7 @@ class BukuMapelKejuruanResource extends Resource
                         'TITL' => 'TITL',
                         'TAV' => 'TAV',
                         'TG' => 'TG',
-                        'Teknik Jaringan Komputer dan Telekomunikasi' => 'TJKT',
+                        'TJKT' => 'TJKT',
                         'DPIB' => 'DPIB',
                         'ATPH' => 'ATPH',
                     ])->required(),
@@ -51,7 +51,7 @@ class BukuMapelKejuruanResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('judul')->label('Judul')
+                Tables\Columns\TextColumn::make('judul')->label('Judu')
                 ->sortable()
                 ->searchable(),
                 Tables\Columns\TextColumn::make('penerbit')->label('Penerbit')
