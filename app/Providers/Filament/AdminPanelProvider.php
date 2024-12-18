@@ -44,7 +44,7 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 // Widgets\AccountWidget::class,
                 // Widgets\FilamentInfoWidget::class,
-                BukuMapelUmum::class
+                // BukuMapelUmum::class
             ])
             ->middleware([
                 EncryptCookies::class,
