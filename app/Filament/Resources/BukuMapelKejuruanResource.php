@@ -77,9 +77,9 @@ class BukuMapelKejuruanResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
-            ->headerActions([
-                ExportAction::make()->exporter(BukuMapelKejuruanExporter::class)
-            ])
+            // ->headerActions([
+            //     ExportAction::make()->exporter(BukuMapelKejuruanExporter::class)
+            // ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
