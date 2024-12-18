@@ -76,6 +76,7 @@ class BukuMapelKejuruanResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                ExportAction::make()->exporter(BukuMapelKejuruanExporter::class)
             ])
             // ->headerActions([
             //     ExportAction::make()->exporter(BukuMapelKejuruanExporter::class)

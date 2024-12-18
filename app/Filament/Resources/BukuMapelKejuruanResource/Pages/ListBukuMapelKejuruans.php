@@ -16,6 +16,7 @@ class ListBukuMapelKejuruans extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            
         ];
     }
 }
