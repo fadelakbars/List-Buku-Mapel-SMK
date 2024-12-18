@@ -6,6 +6,7 @@ use App\Filament\Exports\BukuMapelKejuruanExporter;
 use App\Filament\Resources\BukuMapelKejuruanResource\Pages;
 use App\Filament\Resources\BukuMapelKejuruanResource\RelationManagers;
 use App\Models\BukuMapelKejuruan;
+use Filament\Actions\Exports\Enums\ExportFormat;
 use Filament\Actions\Exports\Exporter;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -76,11 +77,15 @@ class BukuMapelKejuruanResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                ExportAction::make()->exporter(BukuMapelKejuruanExporter::class)
+                // ExportAction::make()->exporter(BukuMapelKejuruanExporter::class)
             ])
-            // ->headerActions([
-            //     ExportAction::make()->exporter(BukuMapelKejuruanExporter::class)
-            // ])
+            ->headerActions([
+                ExportAction::make()
+                ->exporter(BukuMapelKejuruanExporter::class)
+                ->formats([
+                    ExportFormat::Xlsx,
+                ])
+            ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
