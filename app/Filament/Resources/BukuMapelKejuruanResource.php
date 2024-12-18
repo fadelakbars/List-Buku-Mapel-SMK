@@ -51,11 +51,21 @@ class BukuMapelKejuruanResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('judul')->label('Judul (Jurusan)'),
-                Tables\Columns\TextColumn::make('penerbit')->label('Penerbit'),
-                Tables\Columns\TextColumn::make('jurusan')->label('Jurusan'),
-                Tables\Columns\TextColumn::make('kelas')->label('Kelas'),
-                Tables\Columns\TextColumn::make('jumlah')->label('Jumlah'),
+                Tables\Columns\TextColumn::make('judul')->label('Judul (Jurusan)')
+                ->sortable()
+                ->searchable(),
+                Tables\Columns\TextColumn::make('penerbit')->label('Penerbit')
+                ->sortable()
+                ->searchable(),
+                Tables\Columns\TextColumn::make('jurusan')->label('Jurusan')
+                ->sortable()
+                ->searchable(),
+                Tables\Columns\TextColumn::make('kelas')->label('Kelas')
+                ->sortable()
+                ->searchable(),
+                Tables\Columns\TextColumn::make('jumlah')->label('Jumlah')
+                ->sortable()
+                ->searchable(),
                 //
             ])
             ->filters([

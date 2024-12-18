@@ -42,10 +42,18 @@ class BukuMapelUmumResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('judul')->label('Judul Buku'),
-                Tables\Columns\TextColumn::make('penerbit')->label('Penerbit'),
-                Tables\Columns\TextColumn::make('kelas')->label('Kelas'),
-                Tables\Columns\TextColumn::make('jumlah')->label('Jumlah'),
+                Tables\Columns\TextColumn::make('judul')->label('Judul Buku')
+                ->sortable()
+                ->searchable(),
+                Tables\Columns\TextColumn::make('penerbit')->label('Penerbit')
+                ->sortable()
+                ->searchable(),
+                Tables\Columns\TextColumn::make('kelas')->label('Kelas')
+                ->sortable()
+                ->searchable(),
+                Tables\Columns\TextColumn::make('jumlah')->label('Jumlah')
+                ->sortable()
+                ->searchable(),
                 //
             ])
             ->filters([
