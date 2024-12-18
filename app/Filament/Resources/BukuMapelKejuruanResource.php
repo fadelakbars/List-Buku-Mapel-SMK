@@ -79,9 +79,7 @@ class BukuMapelKejuruanResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make()->label('Hapus Semua'),
-                ]),
+                Tables\Actions\DeleteBulkAction::make()->label('Hapus Semua'),
             ]);
     }
 
