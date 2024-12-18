@@ -12,7 +12,7 @@ class BukuMapelUmum extends BaseWidget
     {
         return $table
             ->query(
-                BukuMapelUmum::query()
+                BukuMapelUmum::query(BukuMapelUmum::where('kelas', '!=', '0')->orderBy('judul'))
             )
             ->columns([
                 
