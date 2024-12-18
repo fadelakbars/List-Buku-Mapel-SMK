@@ -51,7 +51,7 @@ class BukuMapelKejuruanResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('judul')->label('Judul (Jurusan)')
+                Tables\Columns\TextColumn::make('judul')->label('Judul')
                 ->sortable()
                 ->searchable(),
                 Tables\Columns\TextColumn::make('penerbit')->label('Penerbit')
