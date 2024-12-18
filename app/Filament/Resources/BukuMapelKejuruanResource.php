@@ -29,8 +29,6 @@ class BukuMapelKejuruanResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('judul')->required(),
-                Forms\Components\TextInput::make('penerbit')->required(),
                 Forms\Components\Select::make('jurusan')
                     ->options([
                         'TEKNIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI' => 'TEKNIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI',
@@ -40,6 +38,8 @@ class BukuMapelKejuruanResource extends Resource
                         'DESAIN PERMODELAN DAN INFORMASI BANGUNAN' => 'DESAIN PERMODELAN DAN INFORMASI BANGUNAN',
                         'TEKNIK AUDIO VIDEO' => 'TEKNIK AUDIO VIDEO',
                     ])->required(),
+                Forms\Components\TextInput::make('judul')->required(),
+                Forms\Components\TextInput::make('penerbit')->required(),
                 Forms\Components\Select::make('kelas')
                     ->options([
                         'X' => 'X',
