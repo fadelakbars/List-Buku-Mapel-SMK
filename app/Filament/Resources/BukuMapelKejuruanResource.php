@@ -58,7 +58,7 @@ class BukuMapelKejuruanResource extends Resource
                 Tables\Columns\TextColumn::make('jurusan')->label('Jurusan')
                 ->sortable()
                 ->searchable(),
-                Tables\Columns\TextColumn::make('judul')->label('Judul')
+                Tables\Columns\TextColumn::make('judul')->label('Judul Buku')
                 ->sortable()
                 ->searchable(),
                 Tables\Columns\TextColumn::make('penerbit')->label('Penerbit')
