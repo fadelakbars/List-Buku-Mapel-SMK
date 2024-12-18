@@ -1,0 +1,10 @@
+created:
+    - database/factories/BukuMapelUmumFactory.php
+    - database/factories/BukuMapelKejuruanFactory.php
+    - database/migrations/2024_12_18_145007_create_buku_mapel_umums_table.php
+    - database/migrations/2024_12_18_145008_create_buku_mapel_kejuruans_table.php
+    - app/Models/BukuMapelUmum.php
+    - app/Models/BukuMapelKejuruan.php
+models:
+    BukuMapelUmum: { judul: string, penerbit: string, kelas: 'enum:X,XI,XII', jumlah: integer, timestamps: timestamps }
+    BukuMapelKejuruan: { judul: string, penerbit: string, kelas: 'enum:X,XI,XII', jurusan: 'enum:TITL,TAV,TG,TJKT,DPIB,ATPH', jumlah: integer, timestamps: timestamps }

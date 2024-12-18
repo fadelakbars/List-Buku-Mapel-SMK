@@ -1,0 +1,15 @@
+models:
+  BukuMapelUmum:
+    judul: string
+    penerbit: string
+    kelas: enum:X,XI,XII
+    jumlah: integer
+    timestamps: true
+
+  BukuMapelKejuruan:
+    judul: string
+    penerbit: string
+    kelas: enum:X,XI,XII
+    jurusan: enum:TITL,TAV,TG,TJKT,DPIB,ATPH
+    jumlah: integer
+    timestamps: true
