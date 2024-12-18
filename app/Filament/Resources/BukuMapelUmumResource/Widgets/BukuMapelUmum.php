@@ -11,9 +11,9 @@ class BukuMapelUmum extends BaseWidget
     public function table(Table $table): Table
     {
         return $table
-            // ->query(
-                
-            // )
+            ->query(
+                BukuMapelUmum::query()
+            )
             ->columns([
                 
                 Tables\Columns\TextColumn::make('judul')->label('Judul Buku')
