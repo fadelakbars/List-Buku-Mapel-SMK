@@ -16,4 +16,11 @@ class EditBukuMapelUmum extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+
+    protected static ?string $title = 'Edit Data Buku'; 
+
+    protected function getRedirectUrl(): string
+    {
+        return route('filament.admin.resources.buku-mapel-umums.index');
+    }
 }

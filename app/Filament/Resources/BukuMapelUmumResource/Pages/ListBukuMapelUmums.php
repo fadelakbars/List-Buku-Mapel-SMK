@@ -10,6 +10,8 @@ class ListBukuMapelUmums extends ListRecords
 {
     protected static string $resource = BukuMapelUmumResource::class;
 
+    protected static ?string $title = 'Daftar Buku Mapel Umum'; 
+
     protected function getHeaderActions(): array
     {
         return [

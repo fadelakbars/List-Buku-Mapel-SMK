@@ -9,4 +9,12 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateBukuMapelUmum extends CreateRecord
 {
     protected static string $resource = BukuMapelUmumResource::class;
+
+    protected static ?string $title = 'Tambah Buku'; 
+
+    protected function getRedirectUrl(): string
+    {
+        return route('filament.admin.resources.buku-mapel-umums.index');
+    }
+
 }

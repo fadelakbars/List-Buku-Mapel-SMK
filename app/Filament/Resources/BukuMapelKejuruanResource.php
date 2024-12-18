@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\BukuMapelUmumResource\Pages;
-use App\Filament\Resources\BukuMapelUmumResource\RelationManagers;
-use App\Models\BukuMapelUmum;
+use App\Filament\Resources\BukuMapelKejuruanResource\Pages;
+use App\Filament\Resources\BukuMapelKejuruanResource\RelationManagers;
+use App\Models\BukuMapelKejuruan;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,13 +13,13 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class BukuMapelUmumResource extends Resource
+class BukuMapelKejuruanResource extends Resource
 {
-    protected static ?string $model = BukuMapelUmum::class;
+    protected static ?string $model = BukuMapelKejuruan::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    
-    protected static ?string $navigationLabel = 'Buku Mapel Umum';
+
+    protected static ?string $navigationLabel = 'Buku Mapel Kejuruan';
 
     public static function form(Form $form): Form
     {
@@ -27,13 +27,22 @@ class BukuMapelUmumResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('judul')->required(),
                 Forms\Components\TextInput::make('penerbit')->required(),
+                Forms\Components\Select::make('jurusan')
+                    ->options([
+                        'TITL' => 'TITL',
+                        'TAV' => 'TAV',
+                        'TG' => 'TG',
+                        'TJKT' => 'TJKT',
+                        'DPIB' => 'DPIB',
+                        'ATPH' => 'ATPH',
+                    ])->required(),
                 Forms\Components\Select::make('kelas')
                     ->options([
                         'X' => 'X',
                         'XI' => 'XI',
                         'XII' => 'XII',
                     ])->required(),
-                    Forms\Components\TextInput::make('jumlah')->numeric()->required(),
+                Forms\Components\TextInput::make('jumlah')->numeric()->required(),
                 //
             ]);
     }
@@ -42,8 +51,9 @@ class BukuMapelUmumResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('judul')->label('Judul Buku'),
+                Tables\Columns\TextColumn::make('judul')->label('Judul (Jurusan)'),
                 Tables\Columns\TextColumn::make('penerbit')->label('Penerbit'),
+                Tables\Columns\TextColumn::make('jurusan')->label('Jurusan'),
                 Tables\Columns\TextColumn::make('kelas')->label('Kelas'),
                 Tables\Columns\TextColumn::make('jumlah')->label('Jumlah'),
                 //
@@ -71,9 +81,9 @@ class BukuMapelUmumResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBukuMapelUmums::route('/'),
-            'create' => Pages\CreateBukuMapelUmum::route('/create'),
-            'edit' => Pages\EditBukuMapelUmum::route('/{record}/edit'),
+            'index' => Pages\ListBukuMapelKejuruans::route('/'),
+            'create' => Pages\CreateBukuMapelKejuruan::route('/create'),
+            'edit' => Pages\EditBukuMapelKejuruan::route('/{record}/edit'),
         ];
     }
 }
