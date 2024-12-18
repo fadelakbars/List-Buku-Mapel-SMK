@@ -15,7 +15,7 @@ class TabelBukuMapelUmum extends BaseWidget
     {
         return $table
             ->query(
-                BukuMapelUmum::orderBy('judul', 'desc')->take(5)
+                BukuMapelUmum::orderBy('judul', 'desc')->take(10)
             )
             ->columns([
                 // ...

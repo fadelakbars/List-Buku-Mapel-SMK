@@ -15,7 +15,7 @@ class TabelBukuMapelKejuruan extends BaseWidget
     {
         return $table
             ->query(
-                BukuMapelKejuruan::orderBy('jurusan', 'asc')->take(5)
+                BukuMapelKejuruan::orderBy('jurusan', 'asc')->take(10)
             )
             ->columns([
                 // ...
