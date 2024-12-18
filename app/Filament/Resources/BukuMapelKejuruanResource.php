@@ -29,12 +29,12 @@ class BukuMapelKejuruanResource extends Resource
                 Forms\Components\TextInput::make('penerbit')->required(),
                 Forms\Components\Select::make('jurusan')
                     ->options([
-                        'TITL' => 'TITL',
-                        'TAV' => 'TAV',
-                        'TG' => 'TG',
                         'TEKNIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI' => 'TEKNIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI',
-                        'DPIB' => 'DPIB',
-                        'ATPH' => 'ATPH',
+                        'DESAIN KOMUNIKASI VISUAL' => 'DESAIN KOMUNIKASI VISUAL',
+                        'TEKNIK KETENAGA LISTRIKAN' => 'TEKNIK KETENAGA LISTRIKAN',
+                        'AGRIBISNIS TANAMAN PANGAN DAN HOLTIKULTURA' => 'AGRIBISNIS TANAMAN PANGAN DAN HOLTIKULTURA',
+                        'DESAIN PERMODELAN DAN INFORMASI BANGUNAN' => 'DESAIN PERMODELAN DAN INFORMASI BANGUNAN',
+                        'TEKNIK AUDIO VIDEO' => 'TEKNIK AUDIO VIDEO',
                     ])->required(),
                 Forms\Components\Select::make('kelas')
                     ->options([
