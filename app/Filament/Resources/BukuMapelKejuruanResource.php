@@ -32,7 +32,7 @@ class BukuMapelKejuruanResource extends Resource
                         'TITL' => 'TITL',
                         'TAV' => 'TAV',
                         'TG' => 'TG',
-                        'Teknik Jaringan Komputer dan Telekomunikasi' => 'Teknik Jaringan Komputer dan Telekomunikasi',
+                        'TJKT' => 'Teknik Jaringan Komputer dan Telekomunikasi',
                         'DPIB' => 'DPIB',
                         'ATPH' => 'ATPH',
                     ])->required(),
