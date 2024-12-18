@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Exports\BukuMapelUmumExporter;
 use App\Filament\Resources\BukuMapelUmumResource\Pages;
 use App\Filament\Resources\BukuMapelUmumResource\RelationManagers;
 use App\Models\BukuMapelUmum;
@@ -9,6 +10,7 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\ExportAction;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -61,6 +63,9 @@ class BukuMapelUmumResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+            ])
+            ->headerActions([
+                ExportAction::make()->exporter(BukuMapelUmumExporter::class)
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

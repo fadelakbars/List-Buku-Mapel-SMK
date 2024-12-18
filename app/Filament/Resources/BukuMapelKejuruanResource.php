@@ -2,13 +2,16 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Exports\BukuMapelKejuruanExporter;
 use App\Filament\Resources\BukuMapelKejuruanResource\Pages;
 use App\Filament\Resources\BukuMapelKejuruanResource\RelationManagers;
 use App\Models\BukuMapelKejuruan;
+use Filament\Actions\Exports\Exporter;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\ExportAction;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -73,6 +76,9 @@ class BukuMapelKejuruanResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+            ])
+            ->headerActions([
+                ExportAction::make()->exporter(BukuMapelKejuruanExporter::class)
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
